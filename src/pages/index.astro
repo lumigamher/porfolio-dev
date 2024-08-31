@@ -7,6 +7,10 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 import SocialPill from '../components/SocialPill.astro';
 import MailIcon from '../components/icons/Mail.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+
 ---
 
 <Layout 
@@ -14,40 +18,52 @@ import SectionContainer from '../components/SectionContainer.astro';
 	description="Looking for a skilled and passionate web developer? I'm Luis Miguel, and I specialize in creating innovative and efficient web solutions. Let's build something great together."
 >
 	<main>
-		<SectionContainer>
+		<SectionContainer class="py-44 pb-354">
 			<img 
-				class="rounded-full w-20 h-20 mb-4"
+				class="rounded-full w-15 h-20 mb-4"
 				src="https://media.licdn.com/dms/image/v2/D4E03AQFKLF8DuNBB3w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720807623736?e=1730332800&v=beta&t=YwS4QIlRSgHUTuTR4eHWfz9L2Rbfj05gn9JovjEDF70" 
 				alt="mi foto"
    			/>
 			<h1 
-				class="text-white text-5xl flex font-bold flex-row gap-x-4 pb-4"
+				class="text-white text-3xl md:text-4xl lg:text-5xl flex font-bold flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				Hey, I'm Luis Miguel <a href="https://www.linkedin.com/in/lmiguelgamboa" target="_blank" rel="noopener" class="flex items-center justify-center">
 					<Badge>Open to work</Badge>
 				</a>
 			</h1>
 			<h2 
-			class="text-2xl text-wrap"> <span> Hello everyone!</span> <span class="opacity-80">I'm a Junior Full Stack Developer</span> with a passion for backend. <span class="text-yellow-200">Focused on mastering Python, SQL and Spring Boot.</span> Ready to grow and contribute in tech!
+			class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span> Hello everyone!</span> <span class="opacity-80">I'm a Junior Full Stack Developer</span> with a passion for backend. <span class="text-blue-400">Focused on mastering Python, SQL and Spring Boot.</span> Ready to grow and contribute in tech!
 			</h2>
-			<nav class="flex gap-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap ">
 				<SocialPill href="https://www.linkedin.com/in/lmiguelgamboa">
-					<LinkedInIcon class="size-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+					<LinkedInIcon class="size-4 md:size-6 md:w-5 md:h-5 lg:w-6 lg:h-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/lumigamher">
-					<GitHubIcon class="size-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+					<GitHubIcon class="size-4 md:size-6 md:w-5 md:h-5 lg:w-6 lg:h-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="mailto:lumigam@hotmail.com?subject=Service%20Request">
-					<MailIcon class="size-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+					<MailIcon class="size-4 lg:size-6 md:w-5 md:h-5 lg:w-6 lg:h-6" />
 					lumigam@hotmail.com
 				</SocialPill>
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				<Briefcase class="size-6 "/>
+				Experience
+			</h2>
 			<Experience></Experience>
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+				<Code class="size-6 "/>
+				Projects
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
